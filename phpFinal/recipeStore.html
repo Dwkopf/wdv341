@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Project</title>
+    <link type="text/css" rel="stylesheet" href="recipe.css">
+
+    <style>
+        .paypalButt {
+            position:relative;
+            opacity: 1;
+            left: 70px;
+            z-index: 1;
+            height:auto;
+            background-image:transparent;
+        }
+    </style>
+
+</head>
+<body>
+<!-- navigation -->
+<nav class="navbar navbar-expand-md bg-custom navbar-dark">
+    <div class="container-fluid">
+      <div>
+        <a class="navbar-brand mr-3 glow" id="nsf" href="recipeStore.html"><h1>The Recipe Project</h1></a>
+        <p>Make dinner amazing.</p>
+      </div>
+        
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav" id="myNav">
+                <a href="recipeIndex.php" class="nav-item nav-link glow">Home</a>
+                <a href="recipeAbout.html"class="nav-item nav-link glow" >About</a>
+                <a href="recipeStore.html"class="nav-item nav-link glow" >Shop</a>
+                <a href="recipeContact.php" class="nav-item nav-link glow">Contact</a>
+                <a href="recipeLogin.php" class="nav-item nav-link glow">Admin</a>
+            </div>
+        </div>
+        <img src="images/recipeSLogo.gif" class="glow responsive" alt="Recipe Project logo">
+    </div>
+  </nav>
+
+    <h1>Recipe Store</h1>
+
+    <section>
+        <h3>Cook Books</h3>
+        <p>Only $1.99 shipping on all books!</p>
+        <div class ="row">
+            <div class="col">
+                <div class="book">
+                    <h4>Italian Cook Book</h4>
+                    <p>Authentic Italian Recipes</p>
+                    <p>(169 pages)</p>
+                    <p>Only $9.99</p>
+                    <img src="images/italian.jpg" alt="recipe book image">
+                    <form target="paypal" action="https://www.sandbox.paypal.com/cgi-bin/webscr" class="paypalButt" method="post">
+                        <input type="hidden" name="cmd" value="_s-xclick">
+                        <input type="hidden" name="hosted_button_id" value="KA98738F3G6X2">
+                        <input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                        <img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                    </form>
+                        
+
+                </div>
+
+                <div class="book">
+                    <h4>Spanish Cook Book</h4>
+                    <p>Original Spanish Recipes</p>
+                    <p>(216 pages)</p>
+                    <p>Only $9.99</p>
+                    <img src="images/Spanish.jpg" alt="recipe book image">
+                    <form target="paypal" action="https://www.sandbox.paypal.com/cgi-bin/webscr" class="paypalButt" method="post">
+                        <input type="hidden" name="cmd" value="_s-xclick">
+                        <input type="hidden" name="hosted_button_id" value="H8KHXTSS6G6EU">
+                        <input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                        <img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                        </form>
+                        
+
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="book">
+                    <h4>French Cook Book</h4>
+                    <p>Unique French Recipes</p>
+                    <p>(184 pages)</p>
+                    <p>Only $9.99</p>
+                    <img src="images/french.jpg" alt="recipe book image">
+                    <form target="paypal" action="https://www.sandbox.paypal.com/cgi-bin/webscr" class="paypalButt" method="post">
+                        <input type="hidden" name="cmd" value="_s-xclick">
+                        <input type="hidden" name="hosted_button_id" value="MSFHHVH5HB5UA">
+                        <input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                        <img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                        </form>
+                        
+
+                </div>
+
+                <div class="book">
+                    <h4>British Cook Book</h4>
+                    <p>Traditional British Recipes</p>
+                    <p>(159 pages)</p>
+                    <p>Only $9.99</p>
+                    <img src="images/british.jpg" alt="recipe book image">
+                    <form target="paypal" action="https://www.sandbox.paypal.com/cgi-bin/webscr" class="paypalButt" method="post">
+                        <input type="hidden" name="cmd" value="_s-xclick">
+                        <input type="hidden" name="hosted_button_id" value="E8MJFPYDECXBU">
+                        <input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                        <img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                        </form>
+                        
+
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="book">
+                    <h4>Brazilian Cook Book</h4>
+                    <p>Popular Brazilian Recipes</p>
+                    <p>(211 pages)</p>
+                    <p>Only $9.99</p>
+                    <img src="images/brazilian.jpg" alt="recipe book image">
+                    <form target="paypal" action="https://www.sandbox.paypal.com/cgi-bin/webscr" class="paypalButt" method="post">
+                        <input type="hidden" name="cmd" value="_s-xclick">
+                        <input type="hidden" name="hosted_button_id" value="2XTMHC8MYJP2J">
+                        <input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                        <img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                        </form>
+                        
+
+                </div>
+
+                <div class="book">
+                    <h4>African Cook Book</h4>
+                    <p>Delicious African Recipes</p>
+                    <p>(146 pages)</p>
+                    <p>Only $9.99</p>
+                    <img src="images/african.jpg" alt="recipe book image">
+                    <form target="paypal" action="https://www.sandbox.paypal.com/cgi-bin/webscr" class="paypalButt" method="post">
+                        <input type="hidden" name="cmd" value="_s-xclick">
+                        <input type="hidden" name="hosted_button_id" value="8MPVTAJS322FG">
+                        <input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                        <img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                        </form>        
+            </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section>
+        <h3>Favorites</h3>
+        <p>Only $1.99 shipping on all items!</p>
+        <div class="row">
+            <div class="col">
+                <div class="book">
+                    <h4>Recipe Project Coffee Mug</h4>
+                    <p>New Design for 2020</p>
+                    <p>Only $12.99</p>
+                    <img src="images/coffeeMug.jpg" alt="coffee mug image">
+                    <form target="paypal" action="https://www.sandbox.paypal.com/cgi-bin/webscr" class="paypalButt"  method="post">
+                        <input type="hidden" name="cmd" value="_s-xclick">
+                        <input type="hidden" name="hosted_button_id" value="X24Y2T3VMENKL">
+                        <input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                        <img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                        </form>
+                        
+
+                </div>
+
+                <div class="book">
+                    <h4>Spice Rack</h4>
+                    <p>Holds 16 Spices!</p>
+                    <p>Only $49.99</p>
+                    <img src="images/spiceRack.jpg" alt="spice rack image">
+                    <form target="paypal" action="https://www.sandbox.paypal.com/cgi-bin/webscr"  class="paypalButt" method="post">
+                        <input type="hidden" name="cmd" value="_s-xclick">
+                        <input type="hidden" name="hosted_button_id" value="9YBPBJW35TKSY">
+                        <input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                        <img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                        </form>
+                        
+                        
+
+
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="book">
+                    <h4>Recipe Box</h4>
+                    <p>Our most popular item</p>
+                    <p>Only $34.99</p>
+                    <img src="images/recipeBox.jpg" alt="recipe box image">
+                    <form target="paypal" action="https://www.sandbox.paypal.com/cgi-bin/webscr" class="paypalButt"  method="post">
+                        <input type="hidden" name="cmd" value="_s-xclick">
+                        <input type="hidden" name="hosted_button_id" value="JK9XXW4V5HXCJ">
+                        <input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                        <img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                        </form>
+                        
+
+                </div>
+
+                <div class="book">
+                    <h4>Blank Recipe Book</h4>
+                    <p>Keep your recipes in one spot.</p>
+                    <p>Only $5.99</p>
+                    <img src="images/recipeBook.jpg" alt="spice rack image">
+                    <form target="paypal" action="https://www.sandbox.paypal.com/cgi-bin/webscr" class="paypalButt"  method="post">
+                        <input type="hidden" name="cmd" value="_s-xclick">
+                        <input type="hidden" name="hosted_button_id" value="T238PDXM62FUG">
+                        <input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                        <img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                        </form>
+                        
+
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="book">
+                    <h4>Knife Set</h4>
+                    <p>Lifetime Warranty</p>
+                    <p>Only $119.99</p>
+                    <img src="images/knifeSet.jpg" alt="knife set image">
+                    <form target="paypal" action="https://www.sandbox.paypal.com/cgi-bin/webscr"  class="paypalButt" method="post">
+                        <input type="hidden" name="cmd" value="_s-xclick">
+                        <input type="hidden" name="hosted_button_id" value="X6Q3LXD9TRC2S">
+                        <input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                        <img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                        </form>
+                        
+
+                </div>
+
+                <div class="book">
+                    <h4>Kitchen Utensil Set</h4>
+                    <p>All your utensils in one spot.</p>
+                    <p>Only $59.99</p>
+                    <img src="images/kitchenUtensils.jpg" alt="kitchen utensils image">
+                    <form target="paypal" action="https://www.sandbox.paypal.com/cgi-bin/webscr"  class="paypalButt" method="post">
+                        <input type="hidden" name="cmd" value="_s-xclick">
+                        <input type="hidden" name="hosted_button_id" value="GDBMSMKUJQ7SU">
+                        <input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                        <img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                        </form>
+                        
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section>
+        <h3>Digital Goods</h3>
+        <p>Free shipping!</p>
+        <div class ="row">
+            
+            <div class="col">
+                <h4>Best Recipes of 2020</h4>
+                <p>Only $2.99! </p>
+                <p>Now includes free desktop wallpaper!</p>
+                <img src="images/rBook.jpg" alt="recipe book image">
+                <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" class="paypalButt" target="_top">
+                    <input type="hidden" name="cmd" value="_s-xclick">
+                    <input type="hidden" name="hosted_button_id" value="KMQK4KMASPQBA">
+                    <input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                    <img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                </form>
+            </div>
+
+            <div class="col">
+                <h4>Best Recipes of 2019</h4>
+                <p>Now only $1.99.</p>
+                <p>Now includes free desktop wallpaper!</p>
+                <img src="images/rBook2.jpg" alt="recipe book image">
+                <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" class="paypalButt" method="post" target="_top">
+                    <input type="hidden" name="cmd" value="_s-xclick">
+                    <input type="hidden" name="hosted_button_id" value="7LPXJWPN3GX9G">
+                    <input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                    <img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                </form>            
+            </div>
+
+            <div class="col">
+                <h4>Best Recipes of 2018</h4>
+                <p>Now only $1.99.</p>
+                <p>Now includes free desktop wallpaper!</p>
+                <img src="images/rBook3.jpg" alt="recipe book image">
+                <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" class="paypalButt" method="post" target="_top">
+                    <input type="hidden" name="cmd" value="_s-xclick">
+                    <input type="hidden" name="hosted_button_id" value="UG3ZPFGVDZHB2">
+                    <input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                    <img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                </form>  
+            </div>
+        </div>           
+
+    </section>
+
+    <footer class="page-footer font-small pt-4">
+        <!-- Footer Links -->
+        <div class="container-fluid text-center text-md-left">
+          <!-- Grid row -->
+          <div class="row">
+            <!-- Grid column -->
+            <div class="col-md-4 mt-md-0 mt-3">
+              <!-- Content -->
+              <h5 class="text-uppercase glow">The Recipe Project</h5>
+              <p>123 Main St.</p>
+              <p>Chicago, Il 65021</p> 
+            </div>
+            <!-- Grid column -->
+            <!-- Grid column -->
+            <div class="col-md-4 mb-md-0 mb-3">
+              <!-- Links -->
+              <p>Ph: (111)-697-9988</p>
+              <p>Email:info@TheRecipeProject.com</p>
+            </div>
+            <!-- Grid column -->
+      
+            <!-- Grid column -->
+            <div class="col-md-4 mb-md-0 mb-3">
+                <img src="images/facebook.png" class="glow" alt="facebook icon">
+                <img src="images/twitter.png"class="glow"  alt="twitter icon">
+                <img src="images/recipeSLogo.gif" class="glow" alt="recipe project logo">
+            </div>
+            <!-- Grid column -->
+          </div>
+          <!-- Grid row -->
+        </div>
+        <div>
+        </div>
+      </footer>
+      <!-- Footer -->
+    
+</body>
+</html>

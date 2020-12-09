@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="David Kopf">
+    <title>Recipe Project Contact page</title>
+    <link type="text/css" rel="stylesheet" href="recipe.css">
+    <script src="recipes.js"></script> 
+    <script src="recipesLoaded.js"></script> 
+
+    <style>
+        .row {
+            margin:30px;
+        }
+
+        a +img {
+            width:400px;
+            height:300px;
+        }
+
+        #button, #button2, #recipeButton {
+            background-color: #5C5247;
+            color:#DBA367;
+        }
+    </style>
+
+</head>
+<body>
+<!-- navigation -->
+<nav class="navbar navbar-expand-md bg-custom navbar-dark">
+    <div class="container-fluid">
+      <div>
+        <a class="navbar-brand mr-3 glow" id="nsf" href="recipeStore.html"><h1>The Recipe Project</h1></a>
+        <p>Make dinner better.</p>
+      </div>
+        
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav" id="myNav">
+                <a href="recipeIndex.php" class="nav-item nav-link glow">Home</a>
+                <a href="recipeAbout.html"class="nav-item nav-link glow" >About</a>
+                <a href="recipeStore.html"class="nav-item nav-link glow" >Shop</a>
+                <a href="recipeContact.html" class="nav-item nav-link glow">Contact Us</a>
+            </div>
+        </div>
+        <img src="images/recipeSLogo.gif" class="glow responsive" alt="Recipe Project logo">
+    </div>
+  </nav>
+  <img src="images/contact.jpg" alt="contact us image" class="responsive" id="contact">
+
+  <form method="post" action="recipeContact.php">
+    
+    <fieldset>
+    <p class="form-group">
+       <label for="floatName">NAME</label>
+          <input type="text" name="floatName" id="floatName" placeholder="Full Name" required>
+    </p>
+     <p class="form-group">
+         <label for="floatEmail">EMAIL</label>
+         <input type="text" name="floatEmail" id="floatEmail" placeholder="Email Address" required>
+     </p>
+
+     <p class="form-group">
+         <label for="floatMessage">MESSAGE</label>
+           <textarea name="floatMessage" id="floatMessage" placeholder="Your message"></textarea>
+     </p>
+     <div>
+         <input type="submit" name="button" id="button" value="Submit" class="btn btn-primary glow">
+         <input type="reset" name="button2" id="button2" value="Reset"class="btn btn-primary glow" >
+     </div>
+    </fieldset>
+   
+</form>
+    
+</body>
+</html>
