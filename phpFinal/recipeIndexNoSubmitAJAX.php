@@ -89,7 +89,7 @@ if (isset($_POST['search'])) {      // are they searcbing for a recipe?
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav" id="myNav">
-                <a href="recipeIndex.php" class="nav-item nav-link glow">Home</a>
+                <a href="recipeIndexNoSubmitAJAX.php" class="nav-item nav-link glow">Home</a>
                 <a href="recipeAbout.html"class="nav-item nav-link glow" >About</a>
                 <a href="recipeStore.html"class="nav-item nav-link glow" >Shop</a>
                 <a href="recipeContact.php" class="nav-item nav-link glow">Contact</a>
@@ -126,9 +126,9 @@ if (isset($_POST['search'])) {      // are they searcbing for a recipe?
     </div>
 
     
-        <div id="showRecipes" class="gridItem">
+        <div id="showRecipes" class="gridItem"> </div>
      
-        </div>
+        
 <?php
         if (isset($_POST['search']))    {   ?>
             <div id="disRecipes">    <!-- structure for displaying 3 choices -->
@@ -161,9 +161,10 @@ if (isset($_POST['search'])) {      // are they searcbing for a recipe?
                     <p><button onclick="displayRecipe<?php echo $index ?>()">View</button></p>
                 </div>
                 
-                <?php } ?></div> 
-            </div>
-        
+                <?php } ?>
+            </div> 
+       
+  
         
         <?php } 
         else { ?>

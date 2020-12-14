@@ -18,6 +18,7 @@ session_destroy();	//remove current session
 
 <h2>You were logged out.</h2>
 <p><a id = "deleted" href="recipeLogin.php">Login</a></p> 
+<p><a id = "deleted" href="recipeIndexNoSubmitAJAX.php">Back to Recipe Project</a></p> 
 
 </body>
   

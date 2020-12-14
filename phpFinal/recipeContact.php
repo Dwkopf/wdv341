@@ -127,7 +127,7 @@ function test_input($data) {
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav" id="myNav">
-                <a href="recipeIndex.php" class="nav-item nav-link glow">Home</a>
+                <a href="recipeIndexNoSubmitAJAX.php" class="nav-item nav-link glow">Home</a>
                 <a href="recipeAbout.html"class="nav-item nav-link glow" >About</a>
                 <a href="recipeStore.html"class="nav-item nav-link glow" >Shop</a>
                 <a href="recipeContact.php" class="nav-item nav-link glow">Contact</a>

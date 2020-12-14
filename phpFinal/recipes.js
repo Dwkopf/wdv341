@@ -213,6 +213,7 @@ function removeIng(inRecipe) {
 
 
 function displayRecipe(name,image,category,serves,preparationTime,cookTime,ingString,instString) {
+    //alert(name);
     let ingredients = [];
     let instructions = [];
     let pos = 0;
@@ -235,11 +236,11 @@ function displayRecipe(name,image,category,serves,preparationTime,cookTime,ingSt
     }
     instructions.push(instString);
 
-
-    document.querySelector(".container1").style.opacity=1;
-    document.querySelector(".container1").style.height="auto";
-    document.querySelector(".container1").style.zIndex=5;
-    document.querySelector(".container1").style.transform="translate(1000px,-600px)";
+console.log(document.querySelector("#details"));
+    document.querySelector("#details").style.opacity=1;
+    document.querySelector("#details").style.height="auto";
+    document.querySelector("#details").style.zIndex=5;
+    document.querySelector("#details").style.transform="translate(1000px,-600px)";
     document.querySelector("#disRecipes").style.display="none";
     i=0;
     let multiplier =1;
