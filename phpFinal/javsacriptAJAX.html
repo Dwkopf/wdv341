@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+   
+<script src="recipesLoaded.js"></script> 
+<script src="recipes.js"></script> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>WDV321 Advanced Javascript - AJAX Text Example</title>
+
+<script type="text/javascript">
+//    function getData() {
+//        alert("on it");
+//        $.ajax ({
+//            url:'DATABASEJSON2.php',
+//            dataType : 'json',
+//            type:'GET',
+//            success:function(response){
+//                var data = JSON.parse(response);
+//                console.log(data);
+//                document.querySelector("#myDiv").innerHTML = data;
+//            }
+//        })
+//    }
+
+	function getData()
+	{
+		var xmlhttp = new XMLHttpRequest();
+		let x="";
+		xmlhttp.onreadystatechange=function(){
+			if (xmlhttp.readyState==4 && xmlhttp.status==200)
+			{
+			//x= JSON.parse(xmlhttp.responseText);
+		
+            newRecipe = xmlhttp.responseText;
+            console.log(newRecipe);
+            document.querySelector("#myDiv").innerHTML = newRecipe;
+			}
+		}
+		
+		xmlhttp.open("GET","DATABASE.php?recipeType=Magic",true);
+		
+		xmlhttp.send();
+	}
+</script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="recipes.js"></script> 
+ 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="recipes.js"></script> 
+
+</head>
+
+<body>
+
+
+<h1>WDV321 Advanced Javascript</h1>
+
+<h2>AJAX Text Example using Javascript</h2>
+
+<p>This example will use AJAX to access a file on the server when the button is clicked.  
+The contents the file will be placed inside the following heading. It should replace the starting text.</p>
+<div id="myDiv">hello</div>
+<button type="button" onclick="getData()">Change Content</button>
+
+</body>
+</html>

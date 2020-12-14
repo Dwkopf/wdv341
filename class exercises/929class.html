@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <title>WDV321 cookie maker</title>
+    <script>
+        function trackOpenPageTime() {
+            let today = new Date() 
+            console.log("before cookies "+document.cookie);
+                document.cookie="accessTime = "+today+";"+"expires=Thu, 18 Dec 2035 12:00:00 UTC; path=/";
+                console.log("after cookies "+document.cookie);
+            }
+
+    </script>
+
+</head>
+
+<body onload="trackOpenPageTime()">
+    <h1>WDV321 Advanced Javascript</h1>
+    <h2>Cookies</h2>
+    <p>Goto <a href="more929.html">More</a></p>
+
+
+</body>
+
+
+
+</html>

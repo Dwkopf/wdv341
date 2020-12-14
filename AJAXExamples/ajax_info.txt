@@ -1,0 +1,2 @@
+<h1>AJAX Works!</h1>
+<p>for now</p>

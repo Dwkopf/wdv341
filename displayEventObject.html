@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        function getEventObject() {
+    
+             //alert("insideGetProductObject()");
+    
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function() {
+              if (this.readyState == 4 && this.status == 200) {
+                 console.log(this.responseText);
+                 var myObj = JSON.parse(this.responseText);
+               
+                console.log("object contents " + myObj);
+                document.getElementById("displayEvent").innerHTML = "<br>Event Name: " + 
+                myObj.event_name + "<br> Event Description: " + myObj.event_description +
+                "<br> Event Presenter: " + myObj.event_presenter + "<br> Event Date: " +
+                myObj.event_presenter;
+              }
+            };
+            xmlhttp.open("GET", "deliverEventObject.php", true);
+            xmlhttp.send();		
+            
+        }
+    
+    
+    
+    </script>
+
+</head>
+<body>
+
+    <h1>Event Object</h1>
+	<p>Event Information: <span id="displayEvent"></span></p>
+	<p><button onClick="getEventObject()">Display Event</button></p>
+    
+</body>
+</html>

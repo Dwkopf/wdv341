@@ -24,7 +24,7 @@ if (!isset($_SESSION['validUser'])) {
             
 			try {
 			  
-                require 'dbconnect.php';	//CONNECT to the database
+                require 'dbconnect.php';	//CONNECT to the database dbconnectpw for online
                 
                 //mysql DATE stores data in a YYYY-MM-DD format
                 $todaysDate = date("Y-m-d");		//use today's date as the default input to the date( )

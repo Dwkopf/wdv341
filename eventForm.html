@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Self posting form</title>
+
+    <style>
+        form {
+           background-image: url("images/event.jpg");
+           z-index: 3;
+           border:2px solid brown;
+           padding:200px;
+           color:#ACEE4F;
+           text-align: center;
+          
+        }
+        input {
+            background-color:#4D6B23;
+            color:#ACEE4F;
+        }
+
+        legend  {
+            font-size: 2em;
+        }
+    </style>
+</head>
+<body>
+<form action="processPage.php">
+    <fieldset>
+        <legend>Enter Event Information</legend>
+    <label for="eName">Event Name:</label>
+    <input type="text"  id="eName" name="eName"><br><br>
+    
+    <label for="eDesc">Event Description:</label>
+    <input type="text" id="eDesc" name="eDesc"><br><br>
+
+    <label for="ePresenter">Event Presenter:</label>
+    <input type="text" id="ePresenter" name="ePresenter"><br><br>
+
+    <label for="eDay">Event Day:</label>
+    <input type="text" id="eDay" name="eDay"><br><br>
+
+    <label for="eTime">Event Time:</label>
+    <input type="text" id="eTime" name="eTime"><br><br>
+
+    <label for="eLoc">Event Location:</label>
+    <input type="text" id="eLoc" name="eLoc"><br><br>
+
+    <input type="submit" value="Submit">
+    <input type="reset" value="Reset">
+</fieldset>
+</form>
+</body>
+</html>

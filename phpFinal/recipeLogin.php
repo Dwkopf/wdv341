@@ -127,7 +127,7 @@ if (!isset($_SESSION['validUser'])) {
 ?>
     <div id="admin">
 		<h3>Recipe Project Administrator Options:</h3>
-        <p><a href="recipeIndex.php">Create a New Recipe</a></p>
+        <p><a href="recipeInsert.php">Create a New Recipe</a></p>
         <p><a href="listRecipes.php">Modify/Delete a Current Recipe</a></p>
         <p><a href="recipeLogout.php">Logout of Recipe Admin System</a></p>	
     </div>			
@@ -138,11 +138,12 @@ if (!isset($_SESSION['validUser'])) {
 ?>
 			
                 <form method="post" name="recipeLoginForm" action="recipeLogin.php" >
-                <h1>WDV341 Intro PHP</h1>
-                <h2>Recipe Project Admin System</h2>
+               
+                <h1>Recipe Project Admin System</h1>
                 <h2>Please login to the Recipe Administrator System</h2>
                   <p>Username: <input name="loginUsername" type="text" /></p>
                   <p>Password: <input name="loginPassword" type="password" /></p>
+
                   <p><input name="submitLogin" value="Login" type="submit" /> <input name="" type="reset" />&nbsp;</p>
                 </form>
                 

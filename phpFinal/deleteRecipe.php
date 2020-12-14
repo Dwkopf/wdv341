@@ -3,7 +3,8 @@ session_cache_limiter('none');  //This prevents a Chrome error when using the ba
 session_start();
 
 if (!$_SESSION['validUser']) {
-	header('Location: recipeIndex.php');
+    header('Location: recipeIndexNoSubmitAJAX.php');
+    exit();
 }
 
 $deleteRecID = $_GET['recId'];
@@ -75,10 +76,10 @@ else {      // not set yet, display recipe
 
 		error_log($e->getMessage());			//Delivers a developer defined error message to the PHP log file at c:\xampp/php\logs\php_error_log
 		error_log(var_dump(debug_backtrace()));	
-	
+   
 		header('Location:error_page.php');	//sends control to a User friendly page					
 		}
-	
+
 }
 
 ?>

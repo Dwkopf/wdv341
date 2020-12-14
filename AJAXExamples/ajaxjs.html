@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wdv321 ajax</title>
+
+<script>
+	function getData()
+	{
+		var xmlhttp = new XMLHttpRequest();
+        let result="";
+		xmlhttp.onreadystatechange=function(){
+			if (xmlhttp.readyState==4 && xmlhttp.status==200)
+			{
+            result = JSON.parse(xmlhttp.responseText);
+            console.log(result);
+            document.querySelector("#stid").innerHTML= "Student ID: " + result.student_id;
+            document.querySelector("#stFname").innerHTML= "Student First Name: " + result.student_first_name;
+            document.querySelector("#stLname").innerHTML= "Student Last Name: " + result.student_last_name;
+            document.querySelector("#stMajor").innerHTML= "Student Major: " + result.student_major;
+            document.querySelector("#stCredits").innerHTML= "Student Credits: " + result.student_credits;
+            document.querySelector("#stGPA").innerHTML= "Student GPA: " + result.student_gpa;
+            document.querySelector("#stRegDate").innerHTML= "Student Registration Date: " + result.student_registration_date;
+			}
+		}
+		xmlhttp.open("GET","900006361.js",true);
+		xmlhttp.send();
+    }
+    
+    function getData2()
+	{
+		var xmlhttp = new XMLHttpRequest();
+        let result="";
+		xmlhttp.onreadystatechange=function(){
+			if (xmlhttp.readyState==4 && xmlhttp.status==200)
+			{
+            result = JSON.parse(xmlhttp.responseText);
+            console.log(result);
+            document.querySelector("#stid").innerHTML= "Student ID: " + result.student_id;
+            document.querySelector("#stFname").innerHTML= "Student First Name: " + result.student_first_name;
+            document.querySelector("#stLname").innerHTML= "Student Last Name: " + result.student_last_name;
+            document.querySelector("#stMajor").innerHTML= "Student Major: " + result.student_major;
+            document.querySelector("#stCredits").innerHTML= "Student Credits: " + result.student_credits;
+            document.querySelector("#stGPA").innerHTML= "Student GPA: " + result.student_gpa;
+            document.querySelector("#stRegDate").innerHTML= "Student Registration Date: " + result.student_registration_date;
+			}
+		}
+		xmlhttp.open("GET","900668871.js",true);
+		xmlhttp.send();
+    }
+    
+    function getData3()
+	{
+		var xmlhttp = new XMLHttpRequest();
+        let result="";
+		xmlhttp.onreadystatechange=function(){
+			if (xmlhttp.readyState==4 && xmlhttp.status==200)
+			{
+            result = JSON.parse(xmlhttp.responseText);
+            console.log(result);
+            document.querySelector("#stid").innerHTML= "Student ID: " + result.student_id;
+            document.querySelector("#stFname").innerHTML= "Student First Name: " + result.student_first_name;
+            document.querySelector("#stLname").innerHTML= "Student Last Name: " + result.student_last_name;
+            document.querySelector("#stMajor").innerHTML= "Student Major: " + result.student_major;
+            document.querySelector("#stCredits").innerHTML= "Student Credits: " + result.student_credits;
+            document.querySelector("#stGPA").innerHTML= "Student GPA: " + result.student_gpa;
+            document.querySelector("#stRegDate").innerHTML= "Student Registration Date: " + result.student_registration_date;
+			}
+		}
+		xmlhttp.open("GET","903998004.js",true);
+		xmlhttp.send();
+	}
+</script>
+
+
+</head>
+<body>
+
+    <h1>WDV321 Advanced Javascript</h1>
+
+    <h2>AJAX using javascript</h2>
+    
+    <p><button type="button" onclick="getData()">Display Student 1</button></p>
+    <p><button type="button" onclick="getData2()">Display Student 2</button></p>
+    <p><button type="button" onclick="getData3()">Display Student 3</button></p>
+    
+    <div>
+        <p id="stid"></p>
+        <p id="stFname"></p>
+        <p id="stLname"></p>
+        <p id="stMajor"></p>
+        <p id="stCredits"></p>
+        <p id="stGPA"></p>
+        <p id="stRegDate"></p>
+
+    </div>
+    
+
+    
+</body>
+</html>

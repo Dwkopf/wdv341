@@ -46,7 +46,7 @@ section img {
 }
 
 .honeypot {
-  /* main form */
+  /* main submit recipe form */
   display: none;
 }
 
@@ -82,7 +82,7 @@ section img {
   margin-top: 30px;
 }
 
-#admin p a, #updated + p a, #updated + p + p a, #deleted {
+#admin p a, #updated + p a, #updated + p + p a, #deleted, .debug {
   color: #DBA367;
   font-size: 2em;
 }
@@ -138,10 +138,9 @@ button {
   margin: 10px;
 }
 
-#getImage, #myRecipe, #deleteIng, #deleteStep, #removeItems, #removeIngItem {
+#getImage, #deleteIng, #deleteStep, #removeItems, #removeIngItem {
   /* getImage for file uploader, display if dropdown selected */
   display: none;
-  /* display 'my recipes' in dropdown if any recipes submitted*/
 }
 
 #imagePreview img {
@@ -170,15 +169,8 @@ footer img {
 
 #recipeForm {
   padding: 20px;
-  height: 0;
-  position: relative;
   color: #E1C8AD;
-  opacity: 0;
-  bottom: 1000px;
   background-image: url("images/recipeForm.jpg");
-  z-index: -1;
-  -webkit-transition: all 1s;
-  transition: all 1s;
 }
 
 .showRecipe {

@@ -228,12 +228,12 @@ else {
     $(document).ready(function() {
 
         //document.querySelector("#addIng").addEventListener("click",addIngredient);
-        document.querySelector("#addRecipe").addEventListener("click",addARecipe);
+        //document.querySelector("#addRecipe").addEventListener("click",addARecipe);
         //document.querySelector("#addStep").addEventListener("click",addAStep); 
         //document.querySelector("#viewRecipes").addEventListener("change",displayRecipe);
         document.querySelector("#checkImg").addEventListener("click",checkImage);
         //document.querySelector("#search").addEventListener("click",searchRecipe);
-        document.querySelector("#quit").addEventListener("click",addARecipe);
+        //document.querySelector("#quit").addEventListener("click",addARecipe);
         //document.querySelector("#deleteIng").addEventListener("click",removeIng);
         //document.querySelector("#deleteStep").addEventListener("click",removeStep);
 
@@ -462,7 +462,7 @@ else {
         </script>
         <?php
         echo "<script>document.querySelector('#errorMsg').innerHTML = '$message';</script>";
-        echo "<script>addARecipe();</script>";
+       
         
      } ?>
 

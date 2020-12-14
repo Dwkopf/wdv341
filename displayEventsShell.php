@@ -41,7 +41,7 @@
 	<meta charset="utf-8">
 	<title>Presenting Information Technology</title>
 
-	<link rel="stylesheet" href="css/pit.css">
+	<link rel="stylesheet" href="css/events.css">
 
 </head>
 
@@ -57,7 +57,7 @@
     
     <main>
     
-        <h1>Display Available Events</h1>
+        <h1>Available Events</h1>
         
         <?php 
 			while($row=$stmt->fetch(PDO::FETCH_ASSOC) ) {
@@ -70,7 +70,7 @@
 						<span class="eventDescription"><?php echo $row['event_name']; ?></span>
 					</div>               
 					<div class="row">
-						<span class="eventAddress">Desc:<?php echo $row['event_description']; ?></span>
+						<span class="eventAddress">Description:<?php echo $row['event_description']; ?></span>
 					</div>              
 					<div class="row">
                         <div class="col-1-2">

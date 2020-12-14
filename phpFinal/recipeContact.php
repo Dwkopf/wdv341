@@ -5,14 +5,31 @@ function test_input($data) {
     $data = htmlspecialchars($data);
     return $data;
   }
+
+  function validateEmail()
+  {
+    global $cust_email, $validForm, $emailErrMsg;	//Use the GLOBAL Version of these variables instead of making them local
+    $emailErrMsg = "";							//Clear the error message. 
+    
+    //Using a Regular Expression to FORMAT VALIDATION email address
+    if (!preg_match("/([\w\-]+\@[\w\-]+\.[\w\-]+)/",$cust_email))		//Copied straight from W3Schools.  Uses a Regular Expression
+      {
+      $validForm = false;
+        $emailErrMsg = "Invalid email format"; 
+      }		
+  }//end validateEmail()
+
   $validForm = false;
  if (isset($_POST['button'])) {
+    $validForm = true;
     $cust_name = test_input($_POST['custName']);
     $cust_email = test_input($_POST['custEmail']);
     $cust_message = test_input($_POST['custMessage']);
 
-    if ($cust_name != "" && $cust_message != "") {
-        $validForm=true;
+    if ($cust_name == "" || $cust_message == "") 
+        $validForm=false;
+    validateEmail();
+    if ($validForm) {
         try {
             require "recipeDBconnect.php";	//CONNECT to the database
 
@@ -23,12 +40,12 @@ function test_input($data) {
         
             $stmt = $conn->prepare($sql);
         
-            $stmt->bindParam(':uName', $cust_name);
-            $stmt->bindParam(':uEmail', $cust_email);
+            $stmt->bindParam(':uName', $cust_name);   // save name and email to a db
+            $stmt->bindParam(':uEmail', $cust_email);   
 
         
             $stmt->execute();	
-            $message = "Your message was recieved. Someone will be in touch within a few days.";
+            $message = "Your message was recieved. Someone will be in touch soon.";
             
             //echo"<script>alert('$message')</script>";
         }
@@ -39,8 +56,26 @@ function test_input($data) {
             error_log($e->getMessage() );
             error_log(var_dump(debug_backtrace() ) );
         }
+
+        $toEmail = 'dkopf41621@aol.com';
+        $subject = 'Contact form submission from '.$cust_name;
+        $emailBody = '<h1>Contact form submission</h1>
+                      <p><h2>Name:</h2>'.$cust_name.'</p>
+                      <p><h3>Email Address:</h3></p>'.$cust_email.'</p>
+                      <p><h3>Message: </h3>'.$cust_message.'</p>';
+        $emailHeaders = "MIME-Version: 1.0". "\r\n" ;
+        $emailHeaders .= "Content-type: text/html; charset=UTF-8". "\r\n";
+        $emailHeaders .= "From:contact@davidwkopf.com". "\r\n";
+
+        //if(mail($toEmail,$subject,$emailBody,$emailHeaders))
+        if(mail('dkopf41621@aol.com',"hello","more hello","From:contact@davidwkopf.com"))
+          $message .= "Thank you!";
+        else {
+          $validForm = false;
+          $emailErrMsg = "Your message was not sent, please try again.";
+        }
     }
-    echo $validForm;
+    //echo $validForm;
  }
 
 
@@ -63,9 +98,7 @@ function test_input($data) {
     <script src="recipesLoaded.js"></script> 
 
     <style>
-        .row {
-            margin:30px;
-        }
+     
 
         a +img {
             width:400px;
@@ -76,6 +109,7 @@ function test_input($data) {
             background-color: #5C5247;
             color:#DBA367;
         }
+    
     </style>
 
 </head>
@@ -107,10 +141,13 @@ function test_input($data) {
   <img src="images/contact.jpg" alt="contact us image" class="responsive" id="contact">
 
   <?php 
+  
   if ($validForm) {
       echo "<h3>$message</h3>";
   }
   else {
+    if (isset($_POST['button']))
+      echo "<p>$emailErrMsg</p>";
 ?>
   <form method="post" action="recipeContact.php">
     <fieldset>
@@ -123,7 +160,7 @@ function test_input($data) {
          <input type="text" name="custEmail" id="custEmail" placeholder="Email Address" required>
      </p>
 
-     <input type="text" class="honeypot" name="name" placeholder="Leave Blank If Human" autocomplete="off">
+     <input type="hidden" class="honeypot" name="name" placeholder="Leave Blank If Human" autocomplete="off">
 
      <p class="form-group">
          <label for="floatMessage">MESSAGE</label>

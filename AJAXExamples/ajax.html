@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-2.1.4.js"></script>
+
+    <script>
+        $(document).ready(function(){
+        
+            $("button").click(function(){
+                $.ajax({url: "900006361.js", success: function(result){
+                    $("#displayStudents").html(result);
+                }});
+            });
+            
+        });
+        
+        
+        </script>
+
+
+
+</head>
+<body>
+
+    <h1>WDV321 Advanced Javascript</h1>
+
+<h2>AJAX using JQuery</h2>
+
+<button type="button">Display Students</button>
+
+<div id = "displayStudents"></div>
+
+    
+</body>
+</html>

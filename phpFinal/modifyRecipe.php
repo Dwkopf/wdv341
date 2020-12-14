@@ -2,7 +2,8 @@
 session_cache_limiter('none');  //This prevents a Chrome error when using the back button to return to this page.
 session_start();
 if (!$_SESSION['validUser']) {
-	header('Location: recipeIndex.php');
+    header('Location: recipeIndexNoSubmitAJAX.php');
+    exit();
 }
 
 //echo"<script>alert('valid user...I guess')</script>";

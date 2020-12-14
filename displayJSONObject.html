@@ -1,0 +1,62 @@
+<html>
+	<head>
+		<title>WDV321 Advanced Javascript</title>
+		
+		<script>
+		
+			function getStudent() {
+				// alert("inside getStudent()");		//test 
+			
+				var xmlhttp = new XMLHttpRequest();
+				
+				xmlhttp.open("GET","AJAXExerciseFiles/903998004.js",true);
+				xmlhttp.onreadystatechange=function(){
+					if (xmlhttp.readyState==4 && xmlhttp.status==200)
+					{
+						//document.getElementById("myDiv").innerHTML = xmlhttp.responseText;
+						// alert("request successfully completed");	//test
+						console.log("Response " + xmlhttp.responseText);
+						
+						let studentObj = JSON.parse(xmlhttp.responseText);	//convert JSON to JS
+						
+						console.log("JS Response " + studentObj.student_id);
+						
+						document.querySelector("#studentId").innerHTML = studentObj.student_id;
+						document.querySelector("#studentName").innerHTML = studentObj.student_first_name 
+						+ " " + studentObj.student_last_name;
+						
+					}
+				}
+				
+				
+				
+				xmlhttp.send();			
+			
+			}
+		
+		
+		</script>
+	</head>
+	
+	
+	<body>
+		<h1>WDV321 Advanced Javascript</h1>
+		<h2>Unit-8 AJAX</h2>
+		<h3>Consume JSON student objects</h3>
+
+		<p>
+			<button onclick="getStudent()">Display Student</button>
+		</p>
+
+		<p>
+			Student ID: <span id="studentId"></span>
+		</p>
+
+		<p>
+			Student Name: <span id="studentName"></span>
+		</p>
+
+
+
+	</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>WDV321 Advanced Javascript - AJAX Text Example</title>
+
+<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+
+<script>
+
+
+
+</script>
+
+</head>
+
+<body>
+<body>
+
+<h1>WDV321 Advanced Javascript</h1>
+
+<h2>AJAX Text Example using AngularJS</h2>
+
+<p>This example will use AJAX to access a file on the server when the button is clicked.  
+The contents the file will be placed inside the following heading. It should replace the starting text.
+
+<div ng-app="getDataApp" ng-controller="dataControl" id="myDiv">
+	<h2>Let AJAX change this text</h2>
+    <h2>{{textData}}</h2>
+
+	<button type="button" ng-click="getData()">Change Content</button>
+</div>
+<script>
+
+	var app = angular.module('getDataApp', []);
+	app.controller('dataControl',function($scope,$http){
+		$scope.getData = function(){
+			$http({method: "GET",url: "ajax_info.txt"})	//Used this format to process plain text
+			.success(function (response) {$scope.textData = response;});	
+			
+			//NOTE difference from this format  $http.get("URL")   This format assumes JSON file
+		}
+	});
+
+
+
+
+</script>
+
+
+</body>
+</html>

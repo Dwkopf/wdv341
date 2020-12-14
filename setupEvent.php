@@ -2,6 +2,10 @@
     session_cache_limiter('none');  //This prevents a Chrome error when using the back button to return to this page.
     session_start();
 
+    if (!$_SESSION['validUser']) {
+        header('Location: login.php');
+    }
+
 
     $message="";
 	$event_name = "";
@@ -72,8 +76,10 @@ if( isset($_POST['event_submit']) ) {
                 //Create the SQL command string
                 // $sql = "INSERT INTO wdv341_events(event_name,event_description,event_presenter,event_date,event_time)
                 //  VALUES ('$event_name','$event_description','$event_presenter','$event_date','$event_time')";
-				$sql = "INSERT INTO wdv341_events(event_name,event_description,event_presenter,event_date,event_time)
+                
+                $sql = "INSERT INTO wdv341_events(event_name,event_description,event_presenter,event_date,event_time)
                  VALUES (:eName,:eDesc,:ePresenter,:eDate,:eTime)";
+
                 //PREPARE the SQL statement
                 $stmt = $conn->prepare($sql);
                 $stmt->bindParam(':eName', $event_name);

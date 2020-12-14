@@ -3,7 +3,7 @@
 
 	try {
 	  
-	  require "dbconnectonline.php";	//CONNECT to the database
+	  require "dbconnect.php";	//CONNECT to the database
 	  
 	  //Create the SQL command string
 	  $sql = "SELECT * FROM wdv341_events LIMIT 1";   //get all rows from events table

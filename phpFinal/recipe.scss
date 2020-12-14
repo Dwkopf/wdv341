@@ -37,7 +37,7 @@ section {   /* for shop page */
         height:200px;
 }}
 
-.honeypot { /* main form */
+.honeypot { /* main submit recipe form */
     display:none;
 } 
 
@@ -66,13 +66,13 @@ section {   /* for shop page */
     margin-top:30px;
 }
 
-#admin p a, #updated+p a,#updated+p+p a, #deleted{
+#admin p a, #updated+p a,#updated+p+p a, #deleted, .debug{  // admin pages
     color:#DBA367;
     font-size:2em;
 }
 
 
-p span, input+span {
+p span, input+span {        // adjust this
     color:#F5161B;
 }
 
@@ -87,6 +87,7 @@ h1  {
 button {
     background-color: #5C442B;
     color: #E0C7AD;
+    margin:10px;
 }
 
 #disRecipes {           /* display the 3 recipes to select from */
@@ -111,8 +112,8 @@ button {
     margin:10px;
 }
 
-#getImage, #myRecipe, #deleteIng, #deleteStep,#removeItems,#removeIngItem {       /* getImage for file uploader, display if dropdown selected */
-    display:none;                   /* display 'my recipes' in dropdown if any recipes submitted*/
+#getImage, #deleteIng, #deleteStep,#removeItems,#removeIngItem {       /* getImage for file uploader, display if dropdown selected */
+    display:none;                  
 }
 
 #imagePreview img{
@@ -142,14 +143,8 @@ footer {
 
 #recipeForm {      // for filling out recipe form  
     padding:20px;
-    height:0;
-    position:relative;
     color:#E1C8AD;
-    opacity:0;
-    bottom:1000px;
     background-image: url("images/recipeForm.jpg");
-    z-index: -1;
-    transition:all 1s;
 }
 
 .showRecipe {

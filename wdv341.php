@@ -58,6 +58,15 @@ a:hover{
 	<p><a href="Unit-1jsReviewAssignment.html">Hi/Low Game</a></p>
 	<p><a href="phpbasics.php">PHP Basics</a></p>
 	<p><a href="phpFunctions.php">PHP Functions</a></p>
+	<p><a href="http://www.firecrackersnearme.com/fireStore.html#pictures">File uploader</a></p>
+	<p><a href="displayEvents.php">Create select events</a></p>
+	<p><a href="retailProducts.php">Display from database</a></p>
+	<p><a href="displayEventObject.html">PHP-JSON Objects</a></p>
+	<p><a href="exampleForm.html">Form handler</a></p>
+	<p><a href="eventForm.html">Event Form</a></p>
+	<p><a href="inputEvent.php">Self Posting Event Form</a></p>
+	<p><a href="eventsForm.php">Self Posting Event Form with insert</a></p>
+	<p><a href="admin/login.php">Admin Functions</a></p>
 	
 
 <body>

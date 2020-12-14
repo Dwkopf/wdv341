@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch api</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script>
+        /*fetch("900668871.js",  {
+            method: "POST",
+            headers: {
+                "Content-Type":"application/json"
+            },
+            body: JSON.stringify ({
+                name:"user 1"
+            })
+         }).then(res => {
+                return res.json()
+         })
+            .then(data=>console.log(data))
+            document.querySelector("#stid").innerHTML = .then(data=>.student_id
+            .catch(error=>console.log("error"))
+
+          
+            //.then(data => console.log(data))
+            //.catch(error => console.log("error"))
+            //.then(res=>res.json())
+            //.then(data => console.log(data))*/
+
+
+    function getStud1() {
+
+        fetch("900006361.js")
+        .then((res)=> res.json())
+        .then((data)=>  {
+            document.querySelector("#stid").innerHTML="Student ID: " + data.student_id;
+            document.querySelector("#stFname").innerHTML= "Student First Name: " + data.student_first_name;
+            document.querySelector("#stLname").innerHTML= "Student Last Name: " + data.student_last_name;
+            document.querySelector("#stMajor").innerHTML= "Student Major: " + data.student_major;
+            document.querySelector("#stCredits").innerHTML= "Student Credits: " + data.student_credits;
+            document.querySelector("#stGPA").innerHTML= "Student GPA: " + data.student_gpa;
+            document.querySelector("#stRegDate").innerHTML= "Student Registration Date: " + data.student_registration_date;
+        })    
+    }
+    
+function getStud2() {
+
+fetch("900668871.js")
+.then((res)=> res.json())
+.then((data)=>  {console.log(data[0]);// array js file 
+    // document.querySelector("#stid").innerHTML="Student ID: " + data.student_id;
+    // document.querySelector("#stFname").innerHTML= "Student First Name: " + data.student_first_name;
+    // document.querySelector("#stLname").innerHTML= "Student Last Name: " + data.student_last_name;
+    // document.querySelector("#stMajor").innerHTML= "Student Major: " + data.student_major;
+    // document.querySelector("#stCredits").innerHTML= "Student Credits: " + data.student_credits;
+    // document.querySelector("#stGPA").innerHTML= "Student GPA: " + data.student_gpa;
+    // document.querySelector("#stRegDate").innerHTML= "Student Registration Date: " + data.student_registration_date;
+})    
+}
+
+function getStud3() {
+
+fetch("903998004.js")
+.then((res)=> res.json())
+.then((data)=>  {
+    document.querySelector("#stid").innerHTML="Student ID: " + data.student_id;
+    document.querySelector("#stFname").innerHTML= "Student First Name: " + data.student_first_name;
+    document.querySelector("#stLname").innerHTML= "Student Last Name: " + data.student_last_name;
+    document.querySelector("#stMajor").innerHTML= "Student Major: " + data.student_major;
+    document.querySelector("#stCredits").innerHTML= "Student Credits: " + data.student_credits;
+    document.querySelector("#stGPA").innerHTML= "Student GPA: " + data.student_gpa;
+    document.querySelector("#stRegDate").innerHTML= "Student Registration Date: " + data.student_registration_date;
+})    
+}
+
+
+    
+
+    </script>
+
+</head>
+<body>
+    <p><button type="button" onclick="getStud1()">Display Student 1</button></p>
+    <p><button type="button" onclick="getStud2()">Display Student 2</button></p>
+    <p><button type="button" onclick="getStud3()">Display Student 3</button></p>
+
+<div id="output"></div>
+    <div>
+        <p id="stid"></p>
+        <p id="stFname"></p>
+        <p id="stLname"></p>
+        <p id="stMajor"></p>
+        <p id="stCredits"></p>
+        <p id="stGPA"></p>
+        <p id="stRegDate"></p>
+
+    </div>
+    
+</body>
+</html>

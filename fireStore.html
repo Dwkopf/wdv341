@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" /> <!-- Optimal Internet Explorer compatibility -->
+ 
+   <!-- metadata -->
+    <meta charset="utf-8">
+    <meta name="Night Sky Fireworks LLC Home page" content="home page">
+    <meta name="keywords" content="fireworks, firecrackers, pyrotechnics, fourth of july, 4th of July, rocket, bottle rocket, spinner, sparkler,
+    lighter, smoke bomb, cake, shell, independence day, celebration, fuse, poppers, judge, apocolypse, lord of war, rise of power, death shell, 
+    roman candle, Des Moines, Ankeny, Altoona, Bondurant, Johnston, Clive, Saylorville, deals, holiday, flare, professional, display">
+    <meta name="author" content="David Kopf">
+    <meta name="keywords" content="Colfax, Lambs Grove, Newton, Seevers, Mound Prairie, Williamsville, Mitchellville,
+    Valeria, Coal Siding, Wilson">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
+
+	<title>Night Sky Fireworks LLC</title>
+	<!--Author: David Kopf 
+	  Date: June 6, 2020 -->
+	  
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- link for font awesome icons-->
+    <link type="text/css" rel="stylesheet" href="firework.css">
+
+
+<style>
+    .space {
+        margin:20px;
+    }
+    .row p{
+        color:#5D04D9;
+    }
+    img {
+        width:200px;
+        height:175px;
+    }
+    span {
+        color:#F20707;
+    }
+    h3{
+      color:#5D04D9;
+    }
+    nav div #nsf{
+      font-size:1.4em;
+      color:#5D04D9;
+    }
+    form {
+      background-color:transparent;
+      border:2px solid red;
+      padding:0px;
+      margin:0px;
+    }
+
+    input[type=hidden] {
+      display:none;
+    }
+</style>
+</head>
+
+<body>
+  <script
+  src="https://www.paypal.com/sdk/js?client-id=AaInjyI1IUquIPgASHSU9CdLIMwwqKN0349GKmUojfpuePLQWK4FqsKnWWKfCIlEYEpzxjn-EcZ5Rllz"> // Required. Replace SB_CLIENT_ID with your sandbox client ID.
+</script>
+<script src="https://www.paypalobjects.com/api/checkout.js"></script>
+
+  <!-- navigation -->
+        <nav class="navbar navbar-expand-md bg-custom navbar-dark">
+            <div class="container-fluid">
+              <div>
+                <a class="navbar-brand mr-3 glow" id="nsf" href="firecrackersnearme.html">Night Sky Fireworks LLC</a>
+                <h3>Own the Night!</h3>
+              </div>
+                <img src="images/nsfIcon.png" class="glow responsive" alt="Night Sky Fireworks logo">
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav" id="myNav">
+                        <a href="index.html" class="nav-item nav-link active glow">Home</a>
+                        <a href="city.html"class="nav-item nav-link glow" >City Restrictions</a>
+                        <a href="fireContact.html" class="nav-item nav-link glow">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+          </nav>
+
+           
+
+          <div class ="500g row">
+            
+            <!-- shop -->
+                <h1>500g Cakes</h1>
+                <form target="paypal" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" >
+                  <input type="hidden" name="cmd" value="_s-xclick">
+                  <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----">
+                  <input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_viewcart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                  <img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                  </form>
+                  
+                <div class="col">
+                    <p>Willow Explosion</p>
+                    <img src="images/willowExplosion.jpg" alt="Willow Explosion image">
+                    <span>Price: $49.99</span>
+                    <div>Buy Now!</div>
+                    <!-- Paypal button -->
+                    
+                    <form target="_self" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
+                      <input type="hidden" name="cmd" value="_s-xclick">
+                      <input type="hidden" name="hosted_button_id" value="2XJGB82QWHUDG">
+                      <input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                      <img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                      </form>
+                      
+
+                    <!-- willow explosion video -->
+                    <iframe width="400" height="225" src="https://www.youtube.com/embed/pjCLcTrDeEA?rel=0" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                    <p>Totally Twisted</p>
+                    <img src="images/totallyTwisted.jpg" alt="Totally Twisted image">
+                    <span>Price: $59.99</span>
+
+                    <div>Buy Now!
+                      <!-- Paypal button -->
+                      <form target="_self" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
+                        <input type="hidden" name="cmd" value="_s-xclick">
+                        <input type="hidden" name="hosted_button_id" value="6QAPG8R87Z3YN">
+                        <input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                        <img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                        </form>
+                      </div>  
+                    <!-- totally twisted video -->
+                    <iframe width="400" height="225" src="https://www.youtube.com/embed/Nv0DMXPYP2U" frameborder="0" 
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                     
+                    <p>Rockets</p>
+                    <img src="images/6ozRocket.jpg" alt="Image of 6oz rocket">
+                    <span>Price: Varies</span>
+
+                    <form target="_self" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
+                      <input type="hidden" name="cmd" value="_s-xclick">
+                      <input type="hidden" name="hosted_button_id" value="5KGJPXRLZKLNY">
+                      <table>
+                      <tr><td><input type="hidden" name="on0" value="Size">Size</td></tr><tr><td><select name="os0">
+                        <option value="2 oz rockets">2 oz rockets $4.99 USD</option>
+                        <option value="4 oz rockets">4 oz rockets $5.99 USD</option>
+                        <option value="6 oz rockets">6 oz rockets $6.99 USD</option>
+                        <option value="8 oz rockets">8 oz rockets $7.99 USD</option>
+                      </select> </td></tr>
+                      </table>
+                      <input type="hidden" name="currency_code" value="USD">
+                      <input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                      <img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                    </form>
+                      
+                    <!-- rockets video -->
+                    <iframe width="400" height="225" src="https://www.youtube.com/embed/gKQ9U7MJBOI" frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+               </div><!-- end first col -->
+
+               <div class="col">
+                                 
+                    <p>Show of Force</p>
+                    <img src="images/showForce.jpg" alt="show of force image">
+                    <span>Price: $30.99</span>
+                    <div>Buy Now!</div>
+                    <form target="_self" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
+                      <input type="hidden" name="cmd" value="_s-xclick">
+                      <input type="hidden" name="hosted_button_id" value="C8U48F7KTFKZ6">
+                      <input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                      <img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                    </form>
+                      
+
+                      <!-- show of force video -->
+                    <iframe width="400" height="225" src="https://www.youtube.com/embed/61wfnR93oXY" frameborder="0" 
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                    <p>Rise of Power</p>
+                    <img src="images/riseOfPower.png" alt="Rise of power image">
+                    <span>Price: $55.99</span>
+                    <form target="_self" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
+                      <input type="hidden" name="cmd" value="_s-xclick">
+                      <input type="hidden" name="hosted_button_id" value="QELM37Y2S4ME4">
+                      <input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                      <img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                    </form>
+                                           
+                      <!-- rise of power video -->
+                    <iframe width="400" height="225" src="https://www.youtube.com/embed/VII8o-SiSH0" frameborder="0" 
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                    <p>Our Baby Reveal</p>
+                    <img src="images/baby.jpg" alt="Baby Reveal fireworks image">
+                    <span>Price: $29.99</span>
+                    <form target="_self" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
+                      <input type="hidden" name="cmd" value="_s-xclick">
+                      <input type="hidden" name="hosted_button_id" value="AVAPWKFEKFLW6">
+                      <table>
+                      <tr><td><input type="hidden" name="on0" value="Gender">Gender</td></tr><tr><td><select name="os0">
+                        <option value="Boy">Boy </option>
+                        <option value="Girl">Girl </option>
+                        <option value="Other">Other </option>
+                      </select> </td></tr>
+                      <tr><td><input type="hidden" name="on1" value="Special Instructions">Special Instructions</td></tr><tr><td><input type="text" name="os1" maxlength="200" placeholder="Include a message"></td></tr>
+                      </table>
+                      <input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                      <img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                      </form>
+                                          
+                      
+                      <!-- our baby reveal video -->
+                       <iframe width="400" height="225" src="https://www.youtube.com/embed/bEKmdruWcLM" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+               </div>
+          </div>
+      
+        <div class="space">
+            <div class="row">
+              <form target="paypal" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" >
+                <input type="hidden" name="cmd" value="_s-xclick">
+                <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----MIIHBwYJKoZIhvcNAQcEoIIG+DCCBvQCAQExggE6MIIBNgIBADCBnjCBmDELMAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExETAPBgNVBAcTCFNhbiBKb3NlMRUwEwYDVQQKEwxQYXlQYWwsIEluYy4xFjAUBgNVBAsUDXNhbmRib3hfY2VydHMxFDASBgNVBAMUC3NhbmRib3hfYXBpMRwwGgYJKoZIhvcNAQkBFg1yZUBwYXlwYWwuY29tAgEAMA0GCSqGSIb3DQEBAQUABIGAUFvj7DjOYfXOHXJPOY9SFN7GZ9IN+oPV8+gOhGx9ovegt79l22bDL3L8TRL/aXOKAG3nIvfryEbnUAoRPSSftsdVPBhh7PMxw5h2yz40kNyOelUlD0+6SW1WbJy3P3CK24fi65wRNkxwHcgj31CsH6+x54bM2jKXkYnzBKcBlDUxCzAJBgUrDgMCGgUAMFMGCSqGSIb3DQEHATAUBggqhkiG9w0DBwQIKARJvyBV4m2AMIagKWY9HxMcA4jDHnDbz1MxlsRtgM8sgA1naiXCq2DO7pTsEXTmkvoTQROnPqI5w6CCA6UwggOhMIIDCqADAgECAgEAMA0GCSqGSIb3DQEBBQUAMIGYMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTERMA8GA1UEBxMIU2FuIEpvc2UxFTATBgNVBAoTDFBheVBhbCwgSW5jLjEWMBQGA1UECxQNc2FuZGJveF9jZXJ0czEUMBIGA1UEAxQLc2FuZGJveF9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20wHhcNMDQwNDE5MDcwMjU0WhcNMzUwNDE5MDcwMjU0WjCBmDELMAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExETAPBgNVBAcTCFNhbiBKb3NlMRUwEwYDVQQKEwxQYXlQYWwsIEluYy4xFjAUBgNVBAsUDXNhbmRib3hfY2VydHMxFDASBgNVBAMUC3NhbmRib3hfYXBpMRwwGgYJKoZIhvcNAQkBFg1yZUBwYXlwYWwuY29tMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC3luO//Q3So3dOIEv7X4v8SOk7WN6o9okLV8OL5wLq3q1NtDnk53imhPzGNLM0flLjyId1mHQLsSp8TUw8JzZygmoJKkOrGY6s771BeyMdYCfHqxvp+gcemw+btaBDJSYOw3BNZPc4ZHf3wRGYHPNygvmjB/fMFKlE/Q2VNaic8wIDAQABo4H4MIH1MB0GA1UdDgQWBBSDLiLZqyqILWunkyzzUPHyd9Wp0jCBxQYDVR0jBIG9MIG6gBSDLiLZqyqILWunkyzzUPHyd9Wp0qGBnqSBmzCBmDELMAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExETAPBgNVBAcTCFNhbiBKb3NlMRUwEwYDVQQKEwxQYXlQYWwsIEluYy4xFjAUBgNVBAsUDXNhbmRib3hfY2VydHMxFDASBgNVBAMUC3NhbmRib3hfYXBpMRwwGgYJKoZIhvcNAQkBFg1yZUBwYXlwYWwuY29tggEAMAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEFBQADgYEAVzbzwNgZf4Zfb5Y/93B1fB+Jx/6uUb7RX0YE8llgpklDTr1b9lGRS5YVD46l3bKE+md4Z7ObDdpTbbYIat0qE6sElFFymg7cWMceZdaSqBtCoNZ0btL7+XyfVB8M+n6OlQs6tycYRRjjUiaNklPKVslDVvk8EGMaI/Q+krjxx0UxggGkMIIBoAIBATCBnjCBmDELMAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExETAPBgNVBAcTCFNhbiBKb3NlMRUwEwYDVQQKEwxQYXlQYWwsIEluYy4xFjAUBgNVBAsUDXNhbmRib3hfY2VydHMxFDASBgNVBAMUC3NhbmRib3hfYXBpMRwwGgYJKoZIhvcNAQkBFg1yZUBwYXlwYWwuY29tAgEAMAkGBSsOAwIaBQCgXTAYBgkqhkiG9w0BCQMxCwYJKoZIhvcNAQcBMBwGCSqGSIb3DQEJBTEPFw0yMDEwMjcxNzMyMTNaMCMGCSqGSIb3DQEJBDEWBBTHnp0KZuz+NAathZv4R+4YOY46ojANBgkqhkiG9w0BAQEFAASBgFeGI+bBs24EMiReLcgmWhdAi0NhMq1URV1NZwlzVH465OS2uOuCbBZdwwDUsAU5MOQ8LTjkJH4W6AEwDhYz5ssHhYaAx53491saNEnth4C45AGfDQKF1XDf/p10PANL4P7ntJavtxdG91F/CRs9N++QENJAUULJW9HgW7i8oyEk-----END PKCS7-----">
+                <input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_viewcart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                <img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                </form>
+                
+                <div class="col">
+                    <h2>Come get your fireworks for your backyard celebration this year!</h2>
+                    <p>Located on IA-117, just off of Interstate 80, Colfax exit 155 next to Subway.</p>
+
+                  <!-- map -->
+                    <iframe width="600" height="450" frameborder="0" style="border:0" src=
+                    "https://www.google.com/maps/embed/v1/place?q=place_id:ChIJrztN9kLl7ocRRjVDdtWR_cA&key=AIzaSyBHBMbmBe7OH5Ug_yBiLdZS5GpJpe9Dpg8" 
+                    allowfullscreen></iframe>
+                </div>
+                <div class="col">
+                  <!-- home videos -->
+                    <div style="text-align:center"> 
+                        <h2 id="pictures">Send us your own backyard fireworks pictures!</h2>
+                        <!-- <button onclick="playPause()">Play/Pause</button> if using manual controls-->
+                        <form action="uploadsRevised.php" method="post" enctype="multipart/form-data">
+                          Select image to upload:
+                          <input type="file" name="fileToUpload" id="fileToUpload">
+                          <input type="submit" value="Upload Image" name="submit">
+                      </form>
+                        
+                        <br><br>
+                        <video id="video1" width="420" controls>
+                          <source src="fireballFireworks.mov" type="video/mp4">
+                          Your browser does not support HTML video.
+                        </video>
+                      </div> 
+                      <!-- control function if needed 
+                      <script> 
+                        var myVideo = document.getElementById("video1");                     
+                        function playPause() { 
+                            if (myVideo.paused) 
+                            myVideo.play(); 
+                            else 
+                            myVideo.pause(); 
+                        } 
+                      </script> -->
+                </div>
+
+        </div>
+
+
+    <!-- Footer -->
+<footer class="page-footer font-small pt-4">
+    <!-- Footer Links -->
+    <div class="container-fluid text-center text-md-left">
+      <!-- Grid row -->
+      <div class="row">
+        <!-- Grid column -->
+        <div class="col-md-4 mt-md-0 mt-3">
+          <!-- Content -->
+          <h5 class="text-uppercase glow">Night Sky Fireworks LLC</h5>
+          <p>1406 N Walnut St</p>
+          <p>Colfax, IA 50054</p> 
+        </div>
+        <!-- Grid column -->
+        <!-- Grid column -->
+        <div class="col-md-4 mb-md-0 mb-3">
+          <!-- Links -->
+          <p>Ph: (515)-444-3024</p>
+          <p>Email:info@firecrackersnearme.com</p>
+        </div>
+        <!-- Grid column -->
+  
+        <!-- Grid column -->
+        <div class="col-md-4 mb-md-0 mb-3">
+          <p>Follow us on FaceBook, Instagram and Twitter!</p>
+           <a href="https://www.facebook.com/Night-Sky-Fireworks-LLC-111860373890104" target="_blank">
+            <img src="images/facebook.png" class="glow" alt="facebook icon"></a>
+            <a href="https://www.instagram.com/?hl=en" target="_blank"><img src="images/instagram.jpg" 
+              class="glow" alt="instagram icon"></a>
+            <a href="https://twitter.com/night_llc" target="_blank"><img src="images/twitter.png" 
+              class="glow" alt="twitter icon"></a>
+              
+
+        </div>
+        <!-- Grid column -->
+  
+      </div>
+      <!-- Grid row -->
+  
+    </div>
+  
+    <!-- Copyright -->
+    <div><img src="images/nsfIcon2.png" class="glow" alt="night sky fireworks logo">
+    </div>
+    <!-- Copyright -->
+  
+  </footer>
+  <!-- Footer -->
+</div>
+
+</body>
+</html>

@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Untitled Document</title>
+<title>Formatted content</title>
 
 <?php
 
@@ -20,7 +20,7 @@
 	  $stmt->execute();		
 	  //Prepared statement result will deliver an associative array
 	     $stmt->setFetchMode(PDO::FETCH_ASSOC);
-	  //$result =$sth->fetchAll(PDO::FETCH_COLUMN, product_name);
+	    // $result =$stmt->fetchAll(PDO::FETCH_COLUMN, 'product_name');
   }
 
   catch(PDOException $e)

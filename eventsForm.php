@@ -57,7 +57,7 @@ if( isset($_POST['event_submit']) ) {
     if ($event_time == "") {
         $validForm = false;	
         $event_errMsg .= " Please enter event time";}
-echo($validForm);
+//echo($validForm);
 //echo($event_date);
         if($validForm)
 		{
@@ -66,6 +66,8 @@ echo($validForm);
 				
                 require 'dbconnect.php';	//CONNECT to the database
                 //Create the SQL command string
+                // $sql = "INSERT INTO wdv341_events(event_name,event_description,event_presenter,event_date,event_time)
+                //  VALUES ('$event_name','$event_description','$event_presenter','$event_date','$event_time')";
 				$sql = "INSERT INTO wdv341_events(event_name,event_description,event_presenter,event_date,event_time)
                  VALUES (:eName,:eDesc,:ePresenter,:eDate,:eTime)";
                 //PREPARE the SQL statement
@@ -96,17 +98,8 @@ echo($validForm);
 	//no it does not have that name-value pair
 	//Display EMPTY form to the customer They need to enter input...
 	 //echo "<h1>Empty Form requested!</h1>";
-}
-	
-
-        
+}       
 ?>
-
-
-
-
-
-
 
 
 <!DOCTYPE html>
@@ -183,8 +176,8 @@ echo($validForm);
     </style>
 </head>
 <body>
-<form action="eventsForm.php" method ="post"  onsubmit="return checkform(this);"
-><?php 
+<form action="eventsForm.php" method ="post"  ><!-- insert onsubmit="return checkform(this);" to activate captcha-->
+<?php 
     if ($message == "The Event has been registered.")
         echo("<h2>$message</h2>");
 

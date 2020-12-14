@@ -1,0 +1,29 @@
+form {
+    
+    border:2px solid brown;
+    padding:200px;
+    text-align: center;
+ }
+
+.eventBlock {
+    margin:30px;
+}
+
+a, h3 {
+    font-size: 1.6em;
+    color:#8CEB07;
+}
+
+ body {
+    background-image: url("../images/event.jpg");
+    color:#ACEE4F;
+    text-align: center;
+ }
+ input {
+     background-color:#4D6B23;
+     color:#ACEE4F;
+ }
+
+ legend  {
+     font-size: 2em;
+ }

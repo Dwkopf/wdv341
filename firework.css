@@ -1,0 +1,279 @@
+/* scss document*/
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/*  urban gardens header font */
+@font-face {
+  font-family: 'LiveLaughLove';
+  src: url("LiveLaughLove.ttf");
+}
+
+h2.lead {
+  font-size: 1.5em;
+}
+
+li {
+  color: #F20505;
+}
+
+em {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+#navbarCollapse #myNav a:hover {
+  color: white;
+}
+
+.container-fluid > a {
+  font-size: 1.4em;
+}
+
+.glow {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+          box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow;
+  -webkit-transition-property: -webkit-box-shadow;
+  transition-property: -webkit-box-shadow;
+  transition-property: box-shadow;
+  transition-property: box-shadow, -webkit-box-shadow;
+}
+
+@media only screen and (min-width: 768px) {
+  .glow:hover, .glow:focus, .glow:active {
+    -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+  }
+}
+
+body {
+  color: #F20505;
+  background: url(images/wallPaper.png);
+  line-height: 1.8em;
+  font-size: 1.2em;
+  letter-spacing: 1px;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Indie Flower', serif;
+  font-weight: bold;
+  color: #F20505;
+}
+
+.btn {
+  color: #0D0D0D;
+  background-color: #F20505;
+  border: none;
+}
+
+.container, .col p {
+  color: #0D0D0D;
+}
+
+#myNav a {
+  padding-left: 5vw;
+  color: #0D0D0D;
+}
+
+nav {
+  background-color: #F20505;
+}
+
+nav a {
+  color: #0D0D0D;
+}
+
+.container-fluid > img + .navbar-brand {
+  font-size: 1.8em;
+  font-family: LiveLaughLove;
+  font-weight: bold;
+  color: #0D0D0D;
+}
+
+.jumbotron {
+  color: #F20505;
+  margin-top: 60px;
+}
+
+.page-footer {
+  color: #0D0D0D;
+  background-color: #F20505;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 25px;
+}
+
+.page-footer img {
+  width: 50px;
+  height: 50px;
+  margin: 25px;
+}
+
+.responsive {
+  max-width: 100%;
+  height: auto;
+  margin: auto;
+  border-radius: 10px;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 60px;
+}
+
+.row {
+  padding: 20px 40px;
+}
+
+.row + img {
+  padding: 20px 50px;
+}
+
+h3 {
+  text-indent: 1em;
+}
+
+h3 + img {
+  padding: 20px 50px;
+}
+
+h3 + p {
+  color: #0D0D0D;
+}
+
+/* home page styling */
+.overlayHead {
+  position: absolute;
+  top: 0;
+  background: rgba(0, 0, 0, 0.8);
+  /* Black see-through */
+  color: #f1f1f1;
+  width: 100%;
+  font-size: 3em;
+  padding: 17px;
+  text-align: center;
+  font-family: LiveLaughLove;
+}
+
+.headercenter {
+  position: absolute;
+  top: 40%;
+  left: 30%;
+  color: black;
+  background-color: white;
+  padding: 25px;
+  text-align: center;
+  opacity: .7;
+  border-radius: 50px;
+  font-weight: bold;
+}
+
+.carousel {
+  position: fixed;
+}
+
+/* scroll portion styling - home page */
+.posRelative {
+  position: relative;
+  top: 600px;
+  z-index: 1;
+  background: url(images/wallPaper.png);
+}
+
+@media only screen and (max-width: 900px) {
+  .posRelative {
+    top: 400px;
+  }
+}
+
+.hours {
+  color: yellow;
+  font-size: .5em;
+  margin: 5px;
+  font-family: Arial;
+}
+
+.overlayHeadHours {
+  position: absolute;
+  top: 230px;
+  background: rgba(0, 0, 0, 0.8);
+  /* Black see-through */
+  color: yellow;
+  width: 100%;
+  font-size: 3em;
+  padding: 17px;
+  text-align: center;
+  font-family: Arial;
+}
+
+@media only screen and (max-width: 600px) {
+  .posRelative {
+    top: 0px;
+  }
+  #carouselExampleControls {
+    display: none;
+  }
+  .overlayHeadHours {
+    font-size: 1.5em;
+    padding: 5px;
+    top: 400px;
+  }
+}
+
+/* form styling */
+input[type=text] {
+  width: 80%;
+}
+
+input[type=submit], input[type=reset] {
+  background-color: #F20505;
+  color: black;
+}
+
+textarea {
+  width: 80%;
+}
+
+form {
+  background-color: #595959;
+  border: 2px solid black;
+  font-weight: bold;
+  width: 90%;
+  padding: 10px;
+  margin: 20px;
+  color: black;
+}
+
+form div {
+  text-align: center;
+}
+
+form h3 {
+  text-align: left;
+}
+
+.form-group {
+  text-align: right;
+}
+
+#contact {
+  border-radius: 0px;
+}
+/*# sourceMappingURL=firework.css.map */

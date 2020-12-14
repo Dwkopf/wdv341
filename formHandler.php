@@ -4,7 +4,7 @@
 	//Method 1.  This uses a loop to read each set of name-value pairs stored in the $_POST array
 	$tableBody = "";		//use a variable to store the body of the table being built by the script
 	
-	if (isset($_POST["name"]) && isset($_POST["email"])) {
+	if (isset($_POST["name"]) && isset($_POST["email"])) {// check for honeypot
 	foreach($_POST as $key => $value)		//This will loop through each name-value in the $_POST array
 	{
 		$tableBody .= "<tr>";				//formats beginning of the row

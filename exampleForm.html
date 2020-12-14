@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>WDV341 Intro PHP - Form Example</title>
+
+<script>
+  function displayOptions() {
+    // alert("I'm here");
+    if (document.querySelector("#vehicle2").checked) 
+      document.querySelector("#pickCar").style.display = "block";
+      
+    else
+      document.querySelector("#pickCar").style.display = "none";
+  }
+</script>
+
+<style>
+  #pickCar {
+    display:none;
+  }
+  .ohnohoney{
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 0;
+        width: 0;
+        z-index: -1;
+    }
+
+</style>
+</head>
+
+<body>
+<h1>WDV341 Intro PHP</h1>
+<h2>WDV101 Intro HTML and CSS Chapter 9 - Creating Forms - Code Example</h2>
+<p><strong>Basic Form Handler</strong> - This process will display the 'name = value' pairs for all the elements of a form. This summary will on any number of form elements regardless of their name attribute value. </p>
+<p>Use <strong>basicFormExample.php</strong> in the action attribute of your form. </p>
+<p>Field '<strong>name</strong>' - The value of the name attribute from the HTML form element.</p>
+<p>Field <strong>'value</strong>' - The value entered in the field. This will vary depending upon the HTML form element.</p>
+<form id="form1" name="form1" method="post" action="formHandler.php" autocomplete="off">
+  <p>First Name: 
+    <input type="text" name="firstName" id="firstName" />
+</p>
+  <p>Last Name: 
+    <input type="text" name="lastName" id="lastName" />
+  </p>
+  <p>School: 
+    <input type="text" name="school" id="school" />
+  </p>
+
+  <p>Gender:</p>
+  <p>
+    <input type="radio" id="male" name="gender" value="Male">
+    <label for="male">Male</label><br>
+    <input type="radio" id="female" name="gender" value="Female">
+    <label for="female">Female</label><br>
+    <input type="radio" id="other" name="gender" value="Other">
+    <label for="other">Other</label>
+  </p>
+
+  <p>Vehicle:</p>
+  <p>
+    <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+    <label for="vehicle1"> I have a bike</label><br>
+    <input type="checkbox" id="vehicle2" name="vehicle2" value="Car" onclick="displayOptions()">
+    <label for="vehicle2"> I have a car</label><br>
+  </p>
+
+  
+  <p id = "pickCar">
+    <label for="cars">Choose a car:</label>
+    <select name= "cars" id="cars">
+      <option value="Select">Select one</option>
+      <option value="Volvo">Volvo</option>
+      <option value="Saab">Saab</option>
+      <option value="Opel">Opel</option>
+      <option value="Audi">Audi</option>
+    </select>
+  </p>
+
+
+  <p>
+    <input type="submit" name="button" id="button" value="Submit" />
+    <input type="reset" name="button2" id="button2" value="Reset" />
+  </p>
+
+  <!-- H o n e y p o t -->
+  <label class="ohnohoney" for="name"></label>
+  <input class="ohnohoney" autocomplete="off" type="text" id="name" name="name" placeholder="Your name here">
+  <label class="ohnohoney" for="email"></label>
+  <input class="ohnohoney" autocomplete="off" type="email" id="email" name="email" placeholder="Your e-mail here">
+
+</form>
+
+<p>&nbsp;</p>
+</body>
+
+</html>
